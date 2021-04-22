@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Class dan Objek </title>
+    </head>
+    <body> 
+        <form onsubmit="return false">
+            <p>sepatu1 :<input type="text" id="adidas" placeholder ="adidas"></p>
+            <p>sepatu2 :<input type="text" id="nike" placeholder="nike"></p>
+            <p>sepatu3 :<input type="text" id="vans" placeholder="vans"></p>
+            <button onclick="sles()">
+                Klik Disini  
+            </button>
+        </form>
+    
+        
+        <script>
+            function sles() {
+                let p = document.getElementById("adidas").value;
+                let q = document.getElementById("nike").value;
+                let r = document.getElementById("vans").value;
+
+
+                class sepatu {
+                
+                bahan;
+                warna;
+                adidas;
+                nike;
+                vans;
+        
+                constructor(adidas, nike, vans, bahan, warna) {
+                    this.bahan = "pvc";
+                    this.warna = "hitam";
+                    this.bahan1 = "canvas";
+                    this.warna1 = "abu-abu";
+                    this.bahan2 = "karet";
+                    this.warna2 = "mustard";
+                    this.adidas = p;
+                    this.nike = q;
+                    this.vans = r; 
+
+                }
+        
+                kegunaan(adidas) {
+                    return "sepatu " + adidas + "  digunakan untuk berolahraga";
+                }
+                infoproduk(nike){
+                    return "sepatu " + nike + "  ini produk populer";
+                }
+                beli(vans){
+                    return "sepatu " + vans + "  ini akan dibeli";
+                }
+
+                
+            }
+        
+            let jenissepatu1 = new sepatu;
+            let jenissepatu2 = new sepatu;
+            let jenissepatu3 = new sepatu;
+
+            console.log(jenissepatu1.kegunaan(p));
+            console.log(jenissepatu1.bahan);
+            console.log(jenissepatu1.warna);
+            
+            console.log(jenissepatu2.infoproduk(q));
+            console.log(jenissepatu2.bahan1);
+            console.log(jenissepatu2.warna1);
+            
+            console.log(jenissepatu3.beli(r));
+            console.log(jenissepatu3.bahan2);
+            console.log(jenissepatu3.warna2);
+            
+        
+        }
+        </script>
+    </body>
+</html>
